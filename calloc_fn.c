@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float *fn(float *x,float n,float *a)
+float *fn(float *x,float n,float *a) //"a" is a arrey here
     {
     	  int i;  float xs=0,sqx=0;
     	
@@ -15,15 +15,15 @@ float *fn(float *x,float n,float *a)
 		  xs=xs+x[i];
 		  sqx=sqx+(x[i]*x[i]);
 	    }
-	    a[0]=xs/n;
-	    a[1]=(sqx/n)-(xs*xs)/(n*n);
+	    a[0]=xs/n;            //finding mean
+	    a[1]=(sqx/n)-(xs*xs)/(n*n);  // finding variance
 	    return a;
     }
 int main()
 {
 	int i;
 	float n=100,a[100];
-	float *b;
+	float *b;                         // b is a pointer
 	b=(float*)calloc(n,sizeof(float));
 	if (b==NULL)
 	{
