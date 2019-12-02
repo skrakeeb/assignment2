@@ -2,6 +2,7 @@
    date: 02/12/19
    purpose: study of malloc function*/
 
+// here we are defining the function for finding mean and variance
 
 #include <stdio.h>
 #include <stdlib.h>
